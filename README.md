@@ -1,12 +1,12 @@
-# ✈️ AirG6 Airline Booking System
+# AirG6 Airline Booking System
 
 > A PHP-based airline booking platform that lets users search flights, book trips, select seats & services, and manage trips using a unique confirmation code.
 
 ---
 
-## 📌 Features
+## Features
 
-### 👤 User Side (Guest Access)
+### User Side (Guest Access)
 - Search for **one-way** or **return** flights
 - View available flights with **date, route, and price**
 - Step-by-step booking process:
@@ -22,16 +22,16 @@
   - View trip details
   - Cancel trip using confirmation code *(no login required)*
 
-### 🛠️ Admin Dashboard (Login Required)
+### Admin Dashboard (Login Required)
 - Login authentication for admin
-- Manage Flights *(Create, Read, Update, Delete)*
+- Manage Flights *(CRUD)*
 - Manage Bookings *(View and Delete)*
 - Manage Users *(View and Edit)*
 - View and edit admin profile
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - **Frontend**: HTML, CSS, Bootstrap
 - **Backend**: PHP
@@ -40,12 +40,12 @@
 
 ---
 
-## 🖼 Screenshots
+## Screenshots
 
-### 🏠 Homepage
+### Homepage
 ![Homepage](screenshots/airg6_homepage.png)
 
-### 🧭 Booking Process
+### Booking Process
 **Search Flights**
 ![Search Flights](screenshots/airg6_bookFlights.png)
 
@@ -61,7 +61,7 @@
 **Booking Details**
 ![Booking Details](screenshots/airg6_bookingDetails.png)
 
-### ⚙️ Admin Dashboard
+### Admin Dashboard
 **Dashboard Overview**
 ![Admin Dashboard](screenshots/airg6_adminDashboard.png)
 
@@ -70,7 +70,7 @@
 
 ---
 
-## 🚀 Project Setup
+## Project Setup
 
 > **Note**: This project was developed using XAMPP and runs locally on `localhost`.
 
@@ -82,6 +82,6 @@
 
 ---
 
-## 📫 Contact
+## Contact
 
 For questions or collaboration, feel free to open an issue or contact me through [GitHub](https://github.com/alisatozaj).
