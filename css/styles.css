@@ -1,0 +1,684 @@
+.hero {
+    padding-top: 80px;
+    height: 600px;
+    background: url('../images/bgplane2.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 33, 59, 0.2);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-family: 'Libre Baskerville', serif;
+    /* Classic serif */
+    font-style: bold;
+    color:#f0f0f0;
+    text-shadow: 0px 8px 8px rgba(3, 56, 92, 0.808);
+}
+
+.hero p.tagline {
+    font-family: 'Inter', sans-serif;
+    /* Neutral sans */ }
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.fs-4 {
+    font-size: 1.5rem;
+}
+
+.flight-option {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 12px;
+}
+
+.flight-option:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.flight-summary-box {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.date-box {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    width: 45px;
+    font-size: 0.75rem;
+    padding: 0.2rem 0;
+}
+
+.date-box .month {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.date-box .day {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.route-text {
+    font-size: 1rem;
+}
+
+.flight-date-box {
+    display: inline-block;
+    background-color: #e9f4ff;
+    color: #007bff;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* This ensures the content area takes up at least the viewport height minus header/footer */
+.booking-content-wrapper {
+    min-height: calc(100vh - 200px);
+    /* Adjust 200px based on your header/footer height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* This pushes the footer down */
+.mt-auto {
+    margin-top: auto;
+}
+/* Remove all Bootstrap navbar backgrounds */
+.navbar,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+/* Force white text and transparent background */
+.navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* White underline hover effect */
+.navbar .nav-link {
+    color: white !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* White hamburger menu for mobile */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-brand {
+    color: white !important;
+    font-weight: 700 !important;
+    /* Bold */
+    font-size: 1.5rem !important;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    opacity: 0.9;
+}
+.navbar .btn {
+    background: transparent !important;
+    color: white !important;
+    border: 1.5px solid white !important;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+.booking-form {
+    background: rgba(245, 245, 245, 0.85);
+    border: none;
+}
+
+.booking-form label {
+    color: #333; }
+.search-btn {
+    /* Simple Base Style */
+    background-color: #0056b3;
+    /* Deep professional blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    /* Subtle professional touches */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.search-btn:hover {
+    background-color: #0069d9;
+    /* Slightly lighter on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.search-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.destinations {
+    background: #f8f9fa;
+    color: white;
+    font-weight: 700;
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.475), transparent);
+    color: white;
+    padding: 20px;
+}
+.destinations h2 {
+    color: #000;
+    /* Pure black */
+    font-weight: 600;
+    letter-spacing: -0.5px; 
+}
+.destination-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: white;
+    font-weight:700;
+    text-shadow: 0 1px 3px rgba(0, 1, 1, 0.715);
+}
+
+.destination-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.9; 
+}
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 600px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    /* Darker shadow */
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.testimonials h2 {
+    font-weight: 600 !important;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+/* Carousel arrow overrides - light blue and clean */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: none !important;
+    opacity: 1 !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(90%) saturate(354%) hue-rotate(183deg) brightness(98%) contrast(98%) !important;
+    /* This filter converts the black arrow to #60a5fa (light blue) */
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Remove hover background */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: none !important;
+    opacity: 1 !important;
+}
+
+/* Rest of your existing styles remain unchanged */
+.quote-icon {
+    font-size: 4rem;
+    color: #0056b3;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.traveler-info {
+    display: flex;
+    align-items: center;
+}
+
+.traveler-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px; 
+}
+.benefit-card {
+    padding: 30px 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.073);
+    /* Darker shadow */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border */
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.112);
+}
+.benefits h2 {
+    font-weight: 600 !important;
+    color: #000;
+    letter-spacing: -0.5px;
+    margin-bottom: 3rem !important;
+    position: relative;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0056b3;
+    /* Brand color */
+    background: rgba(0, 86, 179, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-card h3 {
+    color: #0056b3;
+    margin-bottom: 0.5rem; 
+}
+.benefit-card p {
+    color: #555;
+    line-height: 1.5;
+}
+/* Footer Styles */
+.footer-main {
+    background: linear-gradient(135deg, #e6f2ff, #cce5ff);
+    /* Light blue gradient */
+    color: #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-brand {
+    font-weight: 700;
+    color: #090a0b !important;
+    /* Brand blue */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-heading {
+    font-weight: 600;
+    color: #090a0b !important;
+    /* Darker blue */
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-text {
+    color: #444;
+    line-height: 1.6;
+}
+
+.footer-links a {
+    color: #000000 !important;
+    /* Medium blue */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 3px 0;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #000000 !important;
+    /* Darker blue on hover */
+    transform: translateX(3px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: -12px;
+}
+.footer-copyright {
+    background: rgba(4, 39, 75, 0.8);
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    /* Center alignment */
+    display: flex;
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+    text-align: center;
+    /* Fallback for text */
+}
+
+/* Transparent navbar for homepage */
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-transparent .navbar-brand,
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-toggler-icon {
+    color: white !important;
+}
+
+/* Blue navbar for other pages */
+.navbar-blue {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-blue .navbar-brand,
+.navbar-blue .nav-link {
+    color: white !important;
+}
+
+.navbar-blue .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Ensure mobile menu has proper background */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+}
+body {
+    padding-top: 50px;
+}
+body.homepage {
+    padding-top: 0;
+}
+
+body.homepage .navbar-transparent {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+}
+
+body.homepage .navbar-brand,
+body.homepage .nav-link {
+    color: white !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Other pages styles */
+body.other-page .navbar-blue {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.other-page .navbar-brand,
+body.other-page .nav-link {
+    color: white !important;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+}
+/* Gender selection styling */
+.gender-option {
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.gender-option:hover {
+    background-color: #f8f9fa;
+}
+
+.gender-option .form-check-input {
+    margin-top: 0.3em;
+}
+
+/* Passenger list styling */
+.passenger-item {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.passenger-item:last-child {
+    border-bottom: none;
+}
+/* Baggage Section Styling */
+.baggage-type {
+    transition: all 0.2s ease;
+}
+
+.baggage-type:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bag-icon {
+    font-size: 1.8rem;
+    width: 40px;
+    text-align: center;
+}
+
+.baggage-controls {
+    transition: all 0.2s ease;
+}
+
+.btn-minus,
+.btn-plus {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Quantity input styling */
+.baggage-controls input {
+    border: 1px solid #dee2e6;
+    background: white;
+}
+
+/* Baggage summary */
+.baggage-summary i {
+    font-size: 1.1rem;
+}
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.seat-option {
+    margin: 5px;
+}
+
+.seat-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.seat-label.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.seat-label.taken {
+    background-color: #f44336;
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat-label:hover:not(.taken) {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.seat-option input[type="radio"]:checked+.seat-label {
+    background-color: #2196F3;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+}
+
+.seat-sample {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.seat-sample.available {
+    background-color: #4CAF50;
+}
+
+.seat-sample.taken {
+    background-color: #f44336;
+}
+
+.seat-sample.selected {
+    background-color: #2196F3;
+}
