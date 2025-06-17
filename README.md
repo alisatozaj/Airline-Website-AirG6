@@ -80,8 +80,3 @@
 4. Update `config.php` with your database credentials.
 5. Run the project at `http://localhost/airline_website`.
 
----
-
-## Contact
-
-For questions or collaboration, feel free to open an issue or contact me through [GitHub](https://github.com/alisatozaj).
