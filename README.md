@@ -75,8 +75,7 @@
 
 ## Project Setup
 
-> **Note**: This project was developed using XAMPP and runs locally on `localhost`.
-> “This project was built by ![alisa tozaj](https://github.com/alisatozaj) as part of EPOKA University Web Dev class in 2025. Do NOT copy or reuse without permission!”
+> **Note**: This project was developed using XAMPP and runs locally on `localhost`. This project was built by [alisa tozaj](https://github.com/alisatozaj) as part of EPOKA University Web Dev class in 2025. Do NOT copy or reuse without permission.
 
 1. Clone this repository or download the ZIP.
 2. Place the project folder inside your `htdocs/` directory.
